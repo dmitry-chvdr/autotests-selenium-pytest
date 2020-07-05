@@ -34,4 +34,4 @@ class ProductPageLocators():
 class BasketPageLocators():
     BASKET_TOTAL_FORM = (By.CSS_SELECTOR, '#total_basket')
     TEXT_BASKET_IS_EMPTY_ON_PAGE = (By.CSS_SELECTOR, 'div#content_inner p')
-    TEXT_BASKET_IS_EMPTY_WHICH_EXPECTED = 'Your basket is empty.'
+    TEXT_BASKET_IS_EMPTY_WHICH_EXPECTED = 'your basket is empty.'

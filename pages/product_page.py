@@ -1,5 +1,7 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
+from .locators import BasketPageLocators
+from .locators import LoginPageLocators
 
 
 class ProductPage(BasePage):
@@ -24,6 +26,9 @@ class ProductPage(BasePage):
     def should_be_success_message_disappeared(self):
         assert self.should_be_success_message_disappeared(),\
             'Success message is not disappeared, but should be'
+
+    def current_url_should_be_login_page(self):
+        assert self.browser.current_url == LoginPageLocators.LOGIN_PAGE, 'It is not login page, but should be'
 
 
 

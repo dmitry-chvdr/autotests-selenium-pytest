@@ -26,5 +26,4 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     page.open()
     page.go_to_basket_page()
     page.is_not_element_present(*BasketPageLocators.BASKET_TOTAL_FORM)
-    assert page.text_value_element(*BasketPageLocators.TEXT_BASKET_IS_EMPTY) == \
-        BasketPageLocators.TEXT_BASKET_IS_EMPTY_WHICH_EXPECTED, 'Text on page is not what is expected..'
+    page.basket_should_be_empty()
